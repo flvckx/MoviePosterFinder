@@ -14,7 +14,7 @@ class MovieNetwork {
     
     private let movieProvider = MovieProvider()
     
-    private let baseUrl = URL(string: "http://www.omdbapi.com/")!
+    private let baseUrl = URL(string: "https://www.omdbapi.com/")!
     private var parameters: [String: Any] = [:]
     
     func search(_ name: String, completion: @escaping (_ movie: Movie?, _ image: UIImage?, _ error: Error?) -> Void) {
@@ -33,6 +33,11 @@ class MovieNetwork {
             })
         } else {
             getMovie(url, completion: { (movie, error) in
+                if let error = error {
+                    completion(nil, nil, error)
+                    return
+                }
+                
                 guard let image = movie?.image, let imageURL = URL(string: image) else {
                     completion(movie, nil, nil)
                     return
@@ -53,6 +58,13 @@ class MovieNetwork {
                 return
             }
             do {
+                if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+                    let _ = json["Error"] as? String {
+                    let errorMessage = NSError(domain: "Error", code: 0, userInfo: json)
+                    completion(nil, errorMessage)
+                    return
+                }
+                
                 let movie = try self.movieProvider.decodeToStorage(data, urlPath: url.absoluteString)
                 completion(movie, nil)
             } catch let error {
@@ -79,7 +91,8 @@ class MovieNetwork {
     private func urlPath(_ title: String) -> URL? {
         var urlComponents = URLComponents(url: baseUrl, resolvingAgainstBaseURL: true)
         urlComponents?.queryItems = [
-            URLQueryItem(name: "t", value: title)
+            URLQueryItem(name: "t", value: title),
+            URLQueryItem(name: "apikey", value: "2509c908")
         ]
         
         return urlComponents?.url

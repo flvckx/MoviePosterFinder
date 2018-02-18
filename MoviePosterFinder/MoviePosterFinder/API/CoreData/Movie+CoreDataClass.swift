@@ -12,7 +12,7 @@ import CoreData
 
 fileprivate var dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateFormat = "MMM d, yyyy"
+    formatter.dateFormat = "d MMM yyyy"
     return formatter
 }()
 
@@ -26,8 +26,8 @@ public class Movie: NSManagedObject, Decodable {
     }
     
     required convenience public init(from decoder: Decoder) throws {
-        
-        guard let context = decoder.userInfo[.context] as? NSManagedObjectContext,
+        let context = AppDelegate.coreDataStack.managedContext
+        guard // let context = decoder.userInfo[.context] as? NSManagedObjectContext,
             let entity = NSEntityDescription.entity(forEntityName: "Movie", in: context) else {
                 fatalError("Failed to decode Movie!")
                 
@@ -42,5 +42,9 @@ public class Movie: NSManagedObject, Decodable {
         
         let released = try values.decode(String.self, forKey: .releasedDate)
         releasedDate = dateFormatter.date(from: released) as NSDate?
+        
+        let searchDate = SearchDate(context: context)
+        searchDate.date = NSDate()
+        addToSearchDates(searchDate)
     }
 }
