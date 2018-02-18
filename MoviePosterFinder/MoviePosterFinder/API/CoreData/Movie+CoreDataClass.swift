@@ -27,8 +27,7 @@ public class Movie: NSManagedObject, Decodable {
     
     required convenience public init(from decoder: Decoder) throws {
         let context = AppDelegate.coreDataStack.managedContext
-        guard // let context = decoder.userInfo[.context] as? NSManagedObjectContext,
-            let entity = NSEntityDescription.entity(forEntityName: "Movie", in: context) else {
+        guard let entity = NSEntityDescription.entity(forEntityName: "Movie", in: context) else {
                 fatalError("Failed to decode Movie!")
                 
         }

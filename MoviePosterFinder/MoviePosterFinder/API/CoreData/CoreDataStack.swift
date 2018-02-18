@@ -8,10 +8,6 @@
 
 import CoreData
 
-extension CodingUserInfoKey {
-    static let context = CodingUserInfoKey(rawValue: "context")
-}
-
 class CoreDataStack {
     private let modelName: String
     
