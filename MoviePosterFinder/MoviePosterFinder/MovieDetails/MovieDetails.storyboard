@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JDh-sW-WXo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Details View Controller-->
+        <scene sceneID="IAh-mD-xzd">
+            <objects>
+                <viewController id="JDh-sW-WXo" customClass="MovieDetailsViewController" customModule="MoviePosterFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yb8-dR-A6i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wzn-t8-pIj">
+                                <rect key="frame" x="62" y="120" width="250" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="AUj-jy-edp"/>
+                                    <constraint firstAttribute="height" constant="300" id="hff-J6-PbI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terminator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdy-w9-Uei">
+                                <rect key="frame" x="30" y="455" width="315" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2001 year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPS-BN-FFo">
+                                <rect key="frame" x="149.5" y="499" width="75.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rdy-w9-Uei" firstAttribute="centerX" secondItem="yb8-dR-A6i" secondAttribute="centerX" id="20V-iU-DOL"/>
+                            <constraint firstItem="rdy-w9-Uei" firstAttribute="leading" secondItem="4up-uU-e7W" secondAttribute="leading" constant="30" id="9zc-dk-p0g"/>
+                            <constraint firstItem="VPS-BN-FFo" firstAttribute="centerX" secondItem="yb8-dR-A6i" secondAttribute="centerX" id="Dkv-sn-U6h"/>
+                            <constraint firstItem="rdy-w9-Uei" firstAttribute="top" secondItem="Wzn-t8-pIj" secondAttribute="bottom" constant="35" id="MEh-XC-jb5"/>
+                            <constraint firstItem="VPS-BN-FFo" firstAttribute="top" secondItem="rdy-w9-Uei" secondAttribute="bottom" constant="20" id="RHY-Yf-jPp"/>
+                            <constraint firstItem="Wzn-t8-pIj" firstAttribute="top" secondItem="4up-uU-e7W" secondAttribute="top" constant="100" id="X74-Vt-IFY"/>
+                            <constraint firstItem="Wzn-t8-pIj" firstAttribute="centerX" secondItem="yb8-dR-A6i" secondAttribute="centerX" id="fUO-UJ-qW4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4up-uU-e7W"/>
+                    </view>
+                    <connections>
+                        <outlet property="movieCreationDateLabel" destination="VPS-BN-FFo" id="4lG-gJ-FZA"/>
+                        <outlet property="movieNameLabel" destination="rdy-w9-Uei" id="TRr-Ix-hCX"/>
+                        <outlet property="moviePosterImageView" destination="Wzn-t8-pIj" id="nFp-nT-S8M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNe-zq-Njb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229.59999999999999" y="164.16791604197903"/>
+        </scene>
+    </scenes>
+</document>
