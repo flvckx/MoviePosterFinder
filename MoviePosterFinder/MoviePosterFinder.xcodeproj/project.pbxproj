@@ -17,6 +17,12 @@
 		C65505C520399C5E002F4CB6 /* SearchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65505C420399C5E002F4CB6 /* SearchHistoryViewController.swift */; };
 		C65505C720399D00002F4CB6 /* SearchHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C65505C620399D00002F4CB6 /* SearchHistory.storyboard */; };
 		C65505C920399DD7002F4CB6 /* SearchHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65505C820399DD7002F4CB6 /* SearchHistoryTableViewCell.swift */; };
+		C65505CE20399EF4002F4CB6 /* Movie Poster Finder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C65505CC20399EF4002F4CB6 /* Movie Poster Finder.xcdatamodeld */; };
+		C65505D02039A080002F4CB6 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65505CF2039A080002F4CB6 /* CoreDataStack.swift */; };
+		C65505D52039A210002F4CB6 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65505D12039A210002F4CB6 /* Movie+CoreDataClass.swift */; };
+		C65505D62039A210002F4CB6 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65505D22039A210002F4CB6 /* Movie+CoreDataProperties.swift */; };
+		C65505D72039A210002F4CB6 /* SearchDate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65505D32039A210002F4CB6 /* SearchDate+CoreDataClass.swift */; };
+		C65505D82039A210002F4CB6 /* SearchDate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65505D42039A210002F4CB6 /* SearchDate+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		C65505C420399C5E002F4CB6 /* SearchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryViewController.swift; sourceTree = "<group>"; };
 		C65505C620399D00002F4CB6 /* SearchHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchHistory.storyboard; sourceTree = "<group>"; };
 		C65505C820399DD7002F4CB6 /* SearchHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		C65505CD20399EF4002F4CB6 /* Movie Poster Finder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Movie Poster Finder.xcdatamodel"; sourceTree = "<group>"; };
+		C65505CF2039A080002F4CB6 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C65505D12039A210002F4CB6 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C65505D22039A210002F4CB6 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C65505D32039A210002F4CB6 /* SearchDate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchDate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C65505D42039A210002F4CB6 /* SearchDate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchDate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 				C65505C320399C10002F4CB6 /* SearchHistory */,
 				C65505BE20399871002F4CB6 /* MovieDetails */,
 				C65505BD20399830002F4CB6 /* Search */,
+				C65505CB20399EB9002F4CB6 /* CoreData */,
 				C65505AB20399199002F4CB6 /* AppDelegate.swift */,
 				C65505B220399199002F4CB6 /* Assets.xcassets */,
 				C65505B420399199002F4CB6 /* LaunchScreen.storyboard */,
@@ -109,6 +122,19 @@
 				C65505C820399DD7002F4CB6 /* SearchHistoryTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		C65505CB20399EB9002F4CB6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C65505CF2039A080002F4CB6 /* CoreDataStack.swift */,
+				C65505CC20399EF4002F4CB6 /* Movie Poster Finder.xcdatamodeld */,
+				C65505D12039A210002F4CB6 /* Movie+CoreDataClass.swift */,
+				C65505D22039A210002F4CB6 /* Movie+CoreDataProperties.swift */,
+				C65505D32039A210002F4CB6 /* SearchDate+CoreDataClass.swift */,
+				C65505D42039A210002F4CB6 /* SearchDate+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,8 +211,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65505D52039A210002F4CB6 /* Movie+CoreDataClass.swift in Sources */,
+				C65505D82039A210002F4CB6 /* SearchDate+CoreDataProperties.swift in Sources */,
+				C65505D02039A080002F4CB6 /* CoreDataStack.swift in Sources */,
 				C65505AE20399199002F4CB6 /* SearchViewController.swift in Sources */,
 				C65505C520399C5E002F4CB6 /* SearchHistoryViewController.swift in Sources */,
+				C65505D62039A210002F4CB6 /* Movie+CoreDataProperties.swift in Sources */,
+				C65505D72039A210002F4CB6 /* SearchDate+CoreDataClass.swift in Sources */,
+				C65505CE20399EF4002F4CB6 /* Movie Poster Finder.xcdatamodeld in Sources */,
 				C65505AC20399199002F4CB6 /* AppDelegate.swift in Sources */,
 				C65505C2203998AF002F4CB6 /* MovieDetailsViewController.swift in Sources */,
 				C65505C920399DD7002F4CB6 /* SearchHistoryTableViewCell.swift in Sources */,
@@ -378,6 +410,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C65505CC20399EF4002F4CB6 /* Movie Poster Finder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C65505CD20399EF4002F4CB6 /* Movie Poster Finder.xcdatamodel */,
+			);
+			currentVersion = C65505CD20399EF4002F4CB6 /* Movie Poster Finder.xcdatamodel */;
+			path = "Movie Poster Finder.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C65505A020399199002F4CB6 /* Project object */;
 }
