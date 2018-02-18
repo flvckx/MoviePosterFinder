@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ucs-uw-1eX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,7 +21,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pJ-In-S6z">
                                 <rect key="frame" x="40" y="468.5" width="295" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Search"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="searchTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lk4-ri-HBE"/>
                                 </connections>
@@ -35,11 +37,11 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="N4z-78-udA"/>
                                 </connections>
                             </textField>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Z7k-XQ-d9M">
-                                <rect key="frame" x="178" y="323.5" width="20" height="20"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Z7k-XQ-d9M">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="0.73160807291666663" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2pJ-In-S6z" firstAttribute="top" secondItem="ZW3-a8-wMv" secondAttribute="bottom" constant="20" id="FEx-Lc-RVK"/>
                             <constraint firstItem="2pJ-In-S6z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FgH-1p-k5E"/>
@@ -52,13 +54,44 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1pl-Ry-gqK"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Z7k-XQ-d9M" id="UPQ-pr-sZe"/>
                         <outlet property="movieNameTextField" destination="ZW3-a8-wMv" id="r9O-hn-osO"/>
+                        <segue destination="TVE-U5-ZdB" kind="show" identifier="showMovieDetails" id="WWP-x9-REb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="223.19999999999999" y="58.920539730134934"/>
+        </scene>
+        <!--MovieDetails-->
+        <scene sceneID="gDE-VN-XhF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovieDetails" id="TVE-U5-ZdB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H56-9E-RgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1083.2" y="57.571214392803604"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aw0-ng-sFL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ucs-uw-1eX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N4I-eK-09N">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="O8x-kf-1nT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nu5-ky-7JJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633" y="58"/>
         </scene>
     </scenes>
 </document>

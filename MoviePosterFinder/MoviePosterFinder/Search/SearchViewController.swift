@@ -23,6 +23,11 @@ class SearchViewController: UIViewController {
         
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
+        
+        // request
+        // stopAnimating()
+        
+        performSegue(withIdentifier: "showMovieDetails", sender: self)
     }
 }
 
