@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Movie" representedClassName="Movie" syncable="YES">
-        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pathURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="releasedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="searchDates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SearchDate" inverseName="movie" inverseEntity="SearchDate" syncable="YES"/>
     </entity>
     <entity name="SearchDate" representedClassName="SearchDate" syncable="YES">
@@ -11,7 +12,7 @@
         <relationship name="movie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" inverseName="searchDates" inverseEntity="Movie" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Movie" positionX="-45" positionY="0" width="128" height="105"/>
+        <element name="Movie" positionX="-45" positionY="0" width="128" height="120"/>
         <element name="SearchDate" positionX="-18" positionY="54" width="128" height="75"/>
     </elements>
 </model>
