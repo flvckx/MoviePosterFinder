@@ -40,17 +40,27 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Z7k-XQ-d9M">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWj-bo-X63">
+                                <rect key="frame" x="40" y="518.5" width="295" height="30"/>
+                                <state key="normal" title="View History"/>
+                                <connections>
+                                    <segue destination="0eh-uG-9U7" kind="show" id="a8i-2T-vVA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="OWj-bo-X63" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ww-uM-ZcM"/>
                             <constraint firstItem="2pJ-In-S6z" firstAttribute="top" secondItem="ZW3-a8-wMv" secondAttribute="bottom" constant="20" id="FEx-Lc-RVK"/>
                             <constraint firstItem="2pJ-In-S6z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FgH-1p-k5E"/>
                             <constraint firstItem="2pJ-In-S6z" firstAttribute="leading" secondItem="ZW3-a8-wMv" secondAttribute="leading" id="PAc-i2-WRB"/>
                             <constraint firstItem="Z7k-XQ-d9M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SSw-FO-ZGD"/>
                             <constraint firstItem="ZW3-a8-wMv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="b72-zi-5uE"/>
                             <constraint firstItem="Z7k-XQ-d9M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dVD-AI-bq6"/>
+                            <constraint firstItem="OWj-bo-X63" firstAttribute="leading" secondItem="2pJ-In-S6z" secondAttribute="leading" id="nsg-u8-f8W"/>
                             <constraint firstItem="ZW3-a8-wMv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="tVt-a9-jHc"/>
                             <constraint firstItem="ZW3-a8-wMv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v5b-N5-ebN"/>
+                            <constraint firstItem="OWj-bo-X63" firstAttribute="top" secondItem="2pJ-In-S6z" secondAttribute="bottom" constant="20" id="vNX-dl-wNO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -71,7 +81,15 @@
                 <viewControllerPlaceholder storyboardName="MovieDetails" id="TVE-U5-ZdB" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H56-9E-RgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083.2" y="57.571214392803604"/>
+            <point key="canvasLocation" x="1085" y="39"/>
+        </scene>
+        <!--SearchHistory-->
+        <scene sceneID="gwZ-T7-Ypx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SearchHistory" id="0eh-uG-9U7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S2m-EC-l3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aw0-ng-sFL">

@@ -17,11 +17,6 @@ class SearchViewController: UIViewController {
     
     private var movieDetails: (Movie, UIImage?)?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
     private func showAlert(_ message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
@@ -43,27 +38,27 @@ class SearchViewController: UIViewController {
         
         movieNetwork.search(searchQuery) { (movie, image, error) in
             if let error = error as NSError? {
-                DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
+                DispatchQueue.main.async { [weak self] in
+                    self?.activityIndicator.stopAnimating()
                     
                     if let errorMessage = error.userInfo["Error"] as? String {
-                        self.showAlert(errorMessage)
+                        self?.showAlert(errorMessage)
                     } else {
-                        self.showAlert("Error: \(error), \(error.userInfo)")
+                        self?.showAlert("Error: \(error), \(error.userInfo)")
                     }
                 }
             } else if let movie = movie {
                 self.movieDetails = (movie, image)
-                DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
-                    self.performSegue(withIdentifier: "showMovieDetails", sender: self)
+                DispatchQueue.main.async { [weak self] in
+                    self?.activityIndicator.stopAnimating()
+                    self?.performSegue(withIdentifier: "showMovieDetails", sender: self)
                 }
             }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: self)
+        super.prepare(for: segue, sender: sender)
         if let movieDetailsViewController = segue.destination as? MovieDetailsViewController,
             let movieDetails = movieDetails {
             movieDetailsViewController.movie = movieDetails.0

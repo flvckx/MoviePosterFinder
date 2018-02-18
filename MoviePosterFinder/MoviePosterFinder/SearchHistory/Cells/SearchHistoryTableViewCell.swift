@@ -10,4 +10,16 @@ import UIKit
 
 class SearchHistoryTableViewCell: UITableViewCell {
     
+    @IBOutlet private weak var searchDetails: UILabel!
+    
+    var searchDate: SearchDate! {
+        didSet {
+            searchDetails?.text = searchDate.movie?.name
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        searchDetails?.text = nil
+    }
 }

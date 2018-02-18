@@ -25,6 +25,7 @@
 		C65505D82039A210002F4CB6 /* SearchDate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65505D42039A210002F4CB6 /* SearchDate+CoreDataProperties.swift */; };
 		C65505DC2039D1AA002F4CB6 /* MovieNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65505DB2039D1AA002F4CB6 /* MovieNetwork.swift */; };
 		C65505E42039DFD0002F4CB6 /* MovieProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65505E32039DFD0002F4CB6 /* MovieProvider.swift */; };
+		C65505E8203A21CC002F4CB6 /* SearchDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65505E7203A21CC002F4CB6 /* SearchDateProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		C65505D42039A210002F4CB6 /* SearchDate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchDate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C65505DB2039D1AA002F4CB6 /* MovieNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetwork.swift; sourceTree = "<group>"; };
 		C65505E32039DFD0002F4CB6 /* MovieProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieProvider.swift; sourceTree = "<group>"; };
+		C65505E7203A21CC002F4CB6 /* SearchDateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDateProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				C65505E32039DFD0002F4CB6 /* MovieProvider.swift */,
+				C65505E7203A21CC002F4CB6 /* SearchDateProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				C65505D82039A210002F4CB6 /* SearchDate+CoreDataProperties.swift in Sources */,
 				C65505DC2039D1AA002F4CB6 /* MovieNetwork.swift in Sources */,
 				C65505D02039A080002F4CB6 /* CoreDataStack.swift in Sources */,
+				C65505E8203A21CC002F4CB6 /* SearchDateProvider.swift in Sources */,
 				C65505AE20399199002F4CB6 /* SearchViewController.swift in Sources */,
 				C65505C520399C5E002F4CB6 /* SearchHistoryViewController.swift in Sources */,
 				C65505D62039A210002F4CB6 /* Movie+CoreDataProperties.swift in Sources */,

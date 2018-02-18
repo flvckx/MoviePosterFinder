@@ -22,7 +22,12 @@ class MovieProvider {
             let results = try managedContext.fetch(movieFetch)
             
             if results.count > 0 {
-                 return results.first
+                let movie = results.first
+                movie?.addDate(managedContext)
+                
+                try managedContext.save()
+                
+                return movie
             } else {
                 return nil
             }

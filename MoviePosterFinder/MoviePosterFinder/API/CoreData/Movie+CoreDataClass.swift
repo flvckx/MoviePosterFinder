@@ -43,6 +43,10 @@ public class Movie: NSManagedObject, Decodable {
         let released = try values.decode(String.self, forKey: .releasedDate)
         releasedDate = dateFormatter.date(from: released) as NSDate?
         
+        addDate(context)
+    }
+    
+    func addDate(_ context: NSManagedObjectContext) {
         let searchDate = SearchDate(context: context)
         searchDate.date = NSDate()
         addToSearchDates(searchDate)
