@@ -47,8 +47,8 @@ extension SearchHistoryViewController: UITableViewDataSource {
 extension SearchHistoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? SearchHistoryTableViewCell,
-            let searchDate = searchDates?[indexPath.row] {
-            cell.searchDate = searchDate
+            let searchMovieName = searchDates?[indexPath.row].movie?.name {
+            cell.searchMovieName = searchMovieName
         }
     }
 }

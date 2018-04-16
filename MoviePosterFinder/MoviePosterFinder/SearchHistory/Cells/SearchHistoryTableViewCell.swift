@@ -12,9 +12,9 @@ class SearchHistoryTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var searchDetails: UILabel!
     
-    var searchDate: SearchDate! {
+    var searchMovieName: String? {
         didSet {
-            searchDetails?.text = searchDate.movie?.name
+            searchDetails?.text = searchMovieName
         }
     }
     
