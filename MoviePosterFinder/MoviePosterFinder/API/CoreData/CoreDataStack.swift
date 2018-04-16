@@ -8,10 +8,19 @@
 
 import CoreData
 
-class CoreDataStack {
+protocol CoreDataStackManager {
+    var managedContext: NSManagedObjectContext { get }
+    
+    init(modelName: String)
+    
+    func saveContext()
+}
+
+class CoreDataStack: CoreDataStackManager {
+    
     private let modelName: String
     
-    init(modelName: String) {
+    required init(modelName: String) {
         self.modelName = modelName
     }
     

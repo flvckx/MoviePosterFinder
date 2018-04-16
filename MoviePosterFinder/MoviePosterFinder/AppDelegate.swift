@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    static let coreDataStack = CoreDataStack(modelName: "Movie Poster Finder")
+    static let coreDataStack: CoreDataStackManager = CoreDataStack(modelName: "Movie Poster Finder")
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
