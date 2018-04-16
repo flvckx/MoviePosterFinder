@@ -8,7 +8,11 @@
 
 import CoreData
 
-class SearchDateProvider {
+protocol SearchDateProviderManager {
+    func getAll(completion: @escaping (_ searchDates: [SearchDate]?) -> Void)
+}
+
+class SearchDateProvider: SearchDateProviderManager {
     private var managedContext: NSManagedObjectContext {
         return AppDelegate.coreDataStack.managedContext
     }

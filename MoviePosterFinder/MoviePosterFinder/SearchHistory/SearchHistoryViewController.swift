@@ -13,7 +13,7 @@ class SearchHistoryViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     fileprivate let searchHistoryTableViewCellIdentifier = "SearchHistoryTableViewCell"
-    private let searchDateProvider = SearchDateProvider()
+    private let searchDateProvider: SearchDateProviderManager = SearchDateProvider()
     private var searchDates: [SearchDate]?
     
     override func viewDidLoad() {

@@ -8,7 +8,12 @@
 
 import CoreData
 
-class MovieProvider {
+protocol MovieProviderManager {
+    func findInStorage(_ path: String) -> Movie?
+    func decodeToStorage(_ data: Data, urlPath: String) throws -> Movie
+}
+
+class MovieProvider: MovieProviderManager {
     
     private var managedContext: NSManagedObjectContext {
         return AppDelegate.coreDataStack.managedContext

@@ -12,7 +12,7 @@ fileprivate let imageCache = NSCache<NSString, UIImage>()
 
 class MovieNetwork {
     
-    private let movieProvider = MovieProvider()
+    private let movieProvider: MovieProviderManager = MovieProvider()
     
     private let baseUrl = URL(string: "https://www.omdbapi.com/")!
     private var parameters: [String: Any] = [:]
