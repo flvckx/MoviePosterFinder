@@ -10,7 +10,11 @@ import UIKit
 
 fileprivate let imageCache = NSCache<NSString, UIImage>()
 
-class MovieNetwork {
+protocol MovieNetworkManager {
+    func search(_ name: String, completion: @escaping (_ movie: Movie?, _ image: UIImage?, _ error: Error?) -> Void)
+}
+
+class MovieNetwork: MovieNetworkManager {
     
     private let movieProvider: MovieProviderManager = MovieProvider()
     

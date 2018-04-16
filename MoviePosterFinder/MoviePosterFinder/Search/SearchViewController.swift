@@ -13,7 +13,7 @@ class SearchViewController: UIViewController {
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var movieNameTextField: UITextField!
     
-    private let movieNetwork = MovieNetwork()
+    private let movieNetwork: MovieNetworkManager = MovieNetwork()
     
     private var movieDetails: (Movie, UIImage?)?
     
